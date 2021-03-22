@@ -1,0 +1,41 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
+    xmlns:configuracion="using:basicStopWatch.Configuracion"
+    x:Class="basicStopWatch.Configuracion.Configuracion"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+	<Page.Resources>
+		<configuracion:DoubleToTextValueConverter x:Key="DoubleToTextValueConverter"/>
+	</Page.Resources>
+<Grid>
+    <ScrollViewer>
+	<StackPanel Margin="0,0,0,40">
+        <StackPanel HorizontalAlignment="Center">
+		<StackPanel x:Name="Boleanos" Margin="0,10,0,0" Orientation="Vertical" VerticalAlignment="Top">
+			<ToggleSwitch x:Uid="Resume" x:Name="ResumeCount" Header="Contar en Segundo Plano" Toggled="CambiaParametro" Visibility="Collapsed"/>
+			<ToggleSwitch x:Uid="LightMin" x:Name="LightMin" Header="Iluminar la vuelta mas rapida" Toggled="CambiaParametro"/>
+			<ToggleSwitch x:Uid="ShowGraph" x:Name="ShowGraph" Header="Mostrar grafica de vueltas" Toggled="CambiaParametro"/>
+			<ToggleSwitch x:Uid="Vibrate" x:Name="Vibrate" Header="Vibrar Cada Minuto" Toggled="CambiaParametro"/>
+			<ToggleSwitch x:Uid="Sound" x:Name="Sound" Header="Sonido Cada Minuto" Toggled="CambiaParametro"/>
+            <ToggleSwitch x:Uid="RecordRing" x:Name="RecordRing" Header="Mostrar anillo de tiempo Total " Toggled="CambiaParametro"/>
+            <ToggleSwitch x:Uid="Shadow" x:Name="Shadow" Header="Mostrar anillo Fantasma" Toggled="CambiaParametro"/>
+			<Slider x:Name="Slider" Maximum="30" LargeChange="10" SmallChange="5" StepFrequency="5" TickPlacement="Inline" Value="15" Header="{Binding Value, Converter={StaticResource DoubleToTextValueConverter}, ElementName=Slider}" TickFrequency="5" IsEnabled="{Binding IsOn, ElementName=Shadow}" SnapsTo="Ticks" ValueChanged="CambiaTiempoSombra" Minimum="5"/>
+		</StackPanel>
+        
+        <TextBlock x:Uid="Feedback" x:Name="Feedback" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Por favor envie sus comentarios a: julian@repos.mx" VerticalAlignment="Bottom" FontSize="16" Margin="0,0,0,15"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Tapped="ConfirmarCompra">
+            <Image Margin="0,0,10,0" Source="../Assets/beer.png" Stretch="Fill" Height="50" Width="35"/>
+            <TextBlock x:Uid="Purchase" x:Name="Purchase" TextWrapping="Wrap" Text="Si te gustó esta App, Invítame una cerveza haciendo click aqui :)" VerticalAlignment="Center" FontSize="16" MaxWidth="315" Foreground="{ThemeResource PhoneAccentBrush}"/>
+        </StackPanel>
+        
+        </StackPanel>
+        
+    </StackPanel>
+    </ScrollViewer>
+    <HyperlinkButton Content="Made with love in Tapachula, Chiapas, México" Margin="0,0,0,5" VerticalAlignment="Bottom" FontSize="16" HorizontalAlignment="Center" NavigateUri="http://es.wikipedia.org/wiki/Tapachula"/>
+    </Grid>
+</Page>

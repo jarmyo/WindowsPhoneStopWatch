@@ -1,0 +1,23 @@
+<Application x:Class="basicStopWatch.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Application.Resources>
+        <SolidColorBrush x:Key="Brush1" Color="#FF69D2E7"/>
+        <SolidColorBrush x:Key="Brush2" Color="#FFA7DBD8"/>
+        <SolidColorBrush x:Key="Brush3" Color="#FFE0E4CC"/>
+        <SolidColorBrush x:Key="Brush4" Color="#FFF38630"/>
+        <SolidColorBrush x:Key="Brush5" Color="#FFFA6900"/>
+        <SolidColorBrush x:Key="Brush6" Color="#FF702C75"/>
+        <SolidColorBrush x:Key="Brush7" Color="#E5A6E562"/>
+        <SolidColorBrush x:Key="Brush8" Color="#FF424242"/>
+        <SolidColorBrush x:Key="Brush9" Color="#FF2FB8AC"/>
+        <SolidColorBrush x:Key="Brush10" Color="#FFCC293C"/>
+        <x:String x:Key="StringToggle">Reiniciar</x:String>
+        <x:String x:Key="StringToggle2">Vuelta</x:String>
+        <x:String x:Key="StringMenu3">Configuracion</x:String>
+        <x:String x:Key="StringMenu2">Temporizador</x:String>
+        <x:String x:Key="StringMenu1">Cronometro</x:String>
+        <x:String x:Key="StringConfig">Configuracion</x:String>
+        <x:String x:Key="StringAbout">Acerca de</x:String>        
+    </Application.Resources>
+
+</Application>

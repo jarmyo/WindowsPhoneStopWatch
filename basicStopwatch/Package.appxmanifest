@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="42709ReposSoftware.basicStopwatch" Publisher="CN=454A666B-2BA3-499C-867B-3F1760B045C4" Version="1.1.0.55" />
+  <mp:PhoneIdentity PhonePublisherId="454A666B-2BA3-499C-867B-3F1760B045C4" PhoneProductId="0a19e517-c72a-4b5d-a18a-a5c36a4772e7" />
+  <Properties>
+    <DisplayName>basicStopwatch</DisplayName>
+    <PublisherDisplayName>Repos Software</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.1</OSMinVersion>
+    <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="ModernChrono.App">
+      <m3:VisualElements DisplayName="basicStopwatch" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="basic Stopwatch, free, no ads, with modernUI style" ForegroundText="light" BackgroundColor="transparent" ToastCapable="false">
+        <m3:LockScreen Notification="badge" BadgeLogo="Assets\BadgeLogo.png" />
+        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+          <m3:ShowNameOnTiles>
+            <m3:ShowOn Tile="square150x150Logo" />
+          </m3:ShowNameOnTiles>
+        </m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\SplashScreen.png" />
+        <m3:InitialRotationPreference>
+          <m3:Rotation Preference="portrait" />
+        </m3:InitialRotationPreference>
+      </m3:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <DeviceCapability Name="microphone" />
+  </Capabilities>
+</Package>
