@@ -22,36 +22,8 @@ namespace basicStopWatch
 
             if (e.NavigationMode == NavigationMode.New)
             {
-                //var dir = new Uri("ms-appx:///StartStopwatch.xml");
-                //   var dir = new Uri("ms-appx:///" + "StartStopwatch.xml");
-                //try
-                //{
-
-                //StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-
-                //var storageFile = localFolder.GetFileAsync("StartStopwatch.xml").GetResults();
-
-
-                //     var dir = new Uri(this.BaseUri, "ms-appdata:///StartStopwatch.xml");                    
-                //                    var storageFile =  await StorageFile.GetFileFromApplicationUriAsync(dir);
-
-
-                //Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync("StartStopwatch.xml");
-
-                //   Debug.WriteLine(storageFile.Path);
-                //   var arch = Archivo().Result;
                 SetCortana();
-
-
-                // }
-                //catch (Exception el)
-                //{
-                //    Debug.WriteLine(el.Message);
-                //}
-                //finally
-                //{
                 Conf.CortanaInstall = true;
-                //}
             }
 
         }
